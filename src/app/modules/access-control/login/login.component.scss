@@ -1,4 +1,4 @@
-.container {
+.login-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -11,7 +11,7 @@
   background-size: cover;
 }
 
-.container > main {
+.login-container > main {
   height: 607px;
   width: 726px;
   background-color: white;
@@ -22,12 +22,12 @@
   padding: 90px 130px;
 }
 
-.container > main > header > img {
+.login-container > main > header > img {
   width: 287px;
   height: 46px;
 }
 
-.container > main > header > h1 {
+.login-container > main > header > h1 {
   color: #464543;
   font-family: "Source Sans Pro";
   font-size: 20px;
@@ -38,13 +38,13 @@
   margin-bottom: 28px;
 }
 
-.container > main > .messages {
+.login-container > main > .messages {
   color: #d7283a;
   margin-bottom: 16px;
   font-size: 14.5px;
 }
 
-.container > main input {
+.login-container > main input {
   height: 62px;
   /* width: 470px;	 */
   width: 100%;
@@ -55,11 +55,11 @@
   color: #b4b4b4;
 }
 
-.container > main ::-webkit-input-placeholder {
+.login-container > main ::-webkit-input-placeholder {
   color: #b4b4b4;
 }
 
-.container > main button {
+.login-container > main button {
   cursor: pointer;
   margin-top: 20px;
   height: 70px;
@@ -98,14 +98,14 @@
 }
 
 @media (max-width: 800px) {
-  .container > main {
+  .login-container > main {
       /* height: 607px;	 */
       width: 90vw;
   }
 }
 
 @media (max-width: 600px) {
-  .container > main {
+  .login-container > main {
       padding-right: 80px;
       padding-left: 80px;
   }
