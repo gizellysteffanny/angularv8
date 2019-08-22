@@ -1,0 +1,31 @@
+<div class="container">
+  <main>
+      <header>
+          <img src="assets/img/marca-login.svg" alt="Logo">
+          <h1>Seja bem-vindo</h1>
+      </header>
+      <div class="messages" *ngIf="message">
+          {{message}}
+      </div>
+      <div class="form-container">
+          <form (submit)="loginWithPromise()">
+              <div class="form-group">
+                  <label for=""></label>
+                  <!-- <span class="custom-icon user"></span> -->
+                  <input type="text" placeholder="Usuário" 
+                  class="icon-user" name="email"
+                  [(ngModel)]="data.email">
+              </div>
+              <div class="form-group">
+                  <label for=""></label>
+                  <!-- <span class="custom-icon password"></span> -->
+                  <input type="password" placeholder="Senha" 
+                  class="icon-password" name="password"
+                  [(ngModel)]="data.password">
+              </div>
+              <button type="submit"
+              [disabled]="!isValid()">{{action}}</button>
+          </form>
+      </div>
+  </main>
+</div>
