@@ -1,0 +1,36 @@
+<div class="register-container">
+   <main>
+       <header>
+           <img src="assets/img/marca-login.svg" alt="Logo">
+           <h1>Cadastro</h1>
+       </header>
+       <div class="messages" *ngIf="message">
+           {{message}}
+       </div>
+       <div class="form-container">
+           <form (submit)="register()">
+               <div class="form-group">
+                   <label for=""></label>
+                   <!-- <span class="custom-icon user"></span> -->
+                   <input type="text" placeholder="example@email.com" 
+                   class="icon-user" name="email"
+                   [(ngModel)]="data.email">
+               </div>
+               <div class="form-group">
+                   <label for=""></label>
+                   <!-- <span class="custom-icon password"></span> -->
+                   <input type="password" placeholder="**********" 
+                   class="icon-password" name="password"
+                   [(ngModel)]="data.password">
+               </div>
+               <button type="submit"
+               [disabled]="!validateForm()">{{action}}</button>
+
+               <div class="mt-3 text-center">
+                     <a [routerLink]="['/login']" class="text-primary">Fazer login</a>
+                 </div>
+           </form>
+       </div>
+   </main>
+ </div>
+ 

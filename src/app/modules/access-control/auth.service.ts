@@ -15,6 +15,10 @@ export class AuthService {
     return this.http.post(`https://reqres.in/api/login`, data);
   }
 
+  register(data: LoginModel) {
+    return this.http.post(`${Constants.BASE_URL}/register`, data);
+  }
+
   getTokenStorage(): boolean {
     const token = localStorage.getItem(Constants.USER_TOKEN);
 

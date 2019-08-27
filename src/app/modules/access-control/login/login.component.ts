@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
       const response: any = await this.loginService.login(this.data).toPromise();
       console.log(response);
       this.saveSessionUser(response.token);
+      this.router.navigate(['main']);
       this.message = '';
     } catch (error) {
       console.error(error);
