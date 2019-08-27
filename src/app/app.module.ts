@@ -7,6 +7,8 @@ import { AccessControlModule } from './modules/access-control/access-control.mod
 import { MainModule } from './modules/main/main.module';
 
 import { AppComponent } from './app.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './shared/services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,13 @@ import { AppComponent } from './app.component';
     AccessControlModule,
     MainModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
