@@ -28,4 +28,10 @@ export class AuthService {
 
     return true;
   }
+
+  getToken(): string {
+    if (this.getTokenStorage()) {
+      return localStorage.getItem(Constants.USER_TOKEN);
+    }
+  }
 }
